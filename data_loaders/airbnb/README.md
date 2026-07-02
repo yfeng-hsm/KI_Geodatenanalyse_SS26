@@ -12,13 +12,13 @@ Airbnb data is useful for showing how ordinary tabular data becomes geodata: eac
 
 - `notebooks/airbnb_munich_points.ipynb`
 
-The notebook reads Inside Airbnb Munich listing points from the lightweight `visualisations/listings.csv` file, converts latitude/longitude columns to a GeoDataFrame, loads neighbourhood boundaries, maps listing points, demonstrates a spatial join, and writes a prepared GeoJSON output.
+The notebook reads Inside Airbnb Munich listing points from the lightweight `visualisations/listings.csv` file, converts latitude/longitude columns to a GeoDataFrame, joins individual listing text from the detailed `data/listings.csv.gz` file when available, loads neighbourhood boundaries, maps listing points, demonstrates a spatial join, and writes a prepared GeoJSON output. Each map popup can show the listing name, room type, price, neighbourhood, and a shortened description text.
 
 ## Data Source
 
 - Inside Airbnb data portal: https://insideairbnb.com/get-the-data/
 - Example city: Munich, Bavaria, Germany
-- Files used: `listings.csv` for point data and `neighbourhoods.geojson` for polygon boundaries
+- Files used: `listings.csv` for point data, `listings.csv.gz` for individual listing descriptions, and `neighbourhoods.geojson` for polygon boundaries
 - License noted by Inside Airbnb: Creative Commons Attribution 4.0 International License
 
 ## Planned Uses
