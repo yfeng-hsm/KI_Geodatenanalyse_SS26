@@ -23,17 +23,18 @@ H = ReLU(A_hat X W)
 Students can inspect:
 
 - an interactive widget app with `Update one layer` and `Reset` buttons,
-- a PyVis graph panel on the left and an operation explanation panel on the right,
+- a single animated graph panel on the left and an operation explanation panel on the right,
 - directed red arrows for incoming messages into the selected target node,
-- an animated message-flow strip that shows messages moving along the graph and a pulsing self-loop,
-- node fill colors that preserve the current state value and boundary colors that mark the update role,
+- animated message dots directly inside the same graph and a pulsing self-loop,
+- compact hidden-state lights on each node instead of dense numeric node labels,
+- boundary colors that mark the update role: red for the current target, yellow for neighbours, black for other nodes,
 - node features before and after each update,
 - normalized edge weights,
 - the learnable weight matrix,
 - per-neighbour messages for a selected target node,
 - the result after stacking a second GNN layer.
 
-The goal is to make message passing visible through an app-like workflow rather than a sequence of static images. Students can drag, zoom, and hover over the PyVis graph, follow red message arrows and the animated message-flow strip, click an update button, and watch node values and state colors change in place while boundary colors identify the current target, message-source neighbours, and nodes not used in the selected update.
+The goal is to make message passing visible through an app-like workflow rather than a sequence of static images. Students follow red message arrows and animated dots inside the graph, click an update button, and watch hidden-state lights change in place. The right-hand panel visualizes how source hidden states, the weight matrix, edge weights, message vectors, summation, and ReLU produce the next target state.
 
 ### Part B: Real Graph Comparison
 
