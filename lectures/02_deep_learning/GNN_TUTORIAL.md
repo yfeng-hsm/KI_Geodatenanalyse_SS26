@@ -23,7 +23,7 @@ H = ReLU(A_hat X W)
 Students can inspect:
 
 - an interactive widget app with `Update one layer` and `Reset` buttons,
-- a PyVis graph panel rendered through an iframe on the left and an operation explanation panel on the right,
+- a PyVis graph panel on the left and an operation explanation panel on the right,
 - directed red arrows for incoming messages into the selected target node,
 - an animated message-flow strip that shows messages moving along the graph and a pulsing self-loop,
 - node features before and after each update,
@@ -32,7 +32,7 @@ Students can inspect:
 - per-neighbour messages for a selected target node,
 - the result after stacking a second GNN layer.
 
-The goal is to make message passing visible through an app-like workflow rather than a sequence of static images. Students can drag, zoom, and hover over the PyVis graph, follow red message arrows and the animated message-flow strip, click an update button, and watch node values and colors change in place while the right-hand panel explains the current formula, weight matrix, messages, and target-node result. The notebook renders the PyVis graph through an iframe because this is more stable in Colab when the graph is regenerated after button clicks.
+The goal is to make message passing visible through an app-like workflow rather than a sequence of static images. Students can drag, zoom, and hover over the PyVis graph, follow red message arrows and the animated message-flow strip, click an update button, and watch node values and colors change in place while the right-hand panel explains the current formula, weight matrix, messages, and target-node result.
 
 ### Part B: Real Graph Comparison
 
