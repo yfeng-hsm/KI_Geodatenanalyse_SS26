@@ -22,13 +22,14 @@ H = ReLU(A_hat X W)
 
 Students can inspect:
 
+- an interactive widget app with `Update one layer` and `Reset` buttons,
 - node features before and after each update,
 - normalized edge weights,
 - the learnable weight matrix,
 - per-neighbour messages for a selected target node,
 - the result after stacking a second GNN layer.
 
-The goal is to make message passing visible through tables, graph drawings, node colors, edge labels, and explicit numeric updates.
+The goal is to make message passing visible through an app-like workflow, tables, graph drawings, node colors, edge labels, and explicit numeric updates. Students can click an update button and watch values and colors change layer by layer.
 
 ### Part B: Real Graph Comparison
 
