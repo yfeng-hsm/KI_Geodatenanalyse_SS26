@@ -12,9 +12,21 @@ This note links the Colab-ready tutorial for the graph neural network part of th
 
 The notebook is designed for the third deep learning topic after neural networks/CNNs and transformers.
 
-### Part A: Visual Message Passing
+### Part A: Visual Node Classification
 
-The first part uses a tiny graph and a hand-picked GCN-style update:
+The first part uses a tiny graph as a node classification task. Each node has three evidence features:
+
+```text
+water, road, urban/mixed context
+```
+
+The app predicts one of three classes:
+
+```text
+river, street, mixed
+```
+
+The GCN-style update is still:
 
 ```text
 H = ReLU(A_hat X W)
@@ -26,15 +38,17 @@ Students can inspect:
 - a single animated graph panel on the left and an operation explanation panel on the right,
 - directed red arrows for incoming messages into the selected target node,
 - animated message dots directly inside the same graph and a pulsing self-loop,
-- compact hidden-state lights on each node instead of dense numeric node labels,
+- compact hidden-state lights for the three evidence channels instead of dense numeric node labels,
+- current node predictions shown as `river`, `street`, or `mixed`,
 - boundary colors that mark the update role: red for the current target, yellow for neighbours, black for other nodes,
+- one-hop and two-hop receptive field explanations,
 - node features before and after each update,
 - normalized edge weights,
 - the learnable weight matrix,
 - per-neighbour messages for a selected target node,
 - the result after stacking a second GNN layer.
 
-The goal is to make message passing visible through an app-like workflow rather than a sequence of static images. Students follow red message arrows and animated dots inside the graph, click an update button, and watch hidden-state lights change in place. The right-hand panel visualizes how source hidden states, the weight matrix, edge weights, message vectors, summation, and ReLU produce the next target state.
+The goal is to make message passing visible through an app-like workflow rather than a sequence of static images. Students follow red message arrows and animated dots inside the graph, click an update button, and watch hidden-state lights and class predictions change in place. The intentionally ambiguous crossing node starts closer to `mixed`; after it absorbs neighbourhood evidence, the `street` signal becomes stronger. The right-hand panel visualizes how source hidden states, the weight matrix, fixed edge weights, message vectors, summation, and ReLU produce the next target state and prediction.
 
 ### Part B: Real Graph Comparison
 
