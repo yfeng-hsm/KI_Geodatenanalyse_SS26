@@ -26,13 +26,14 @@ Students can inspect:
 - a PyVis graph panel on the left and an operation explanation panel on the right,
 - directed red arrows for incoming messages into the selected target node,
 - an animated message-flow strip that shows messages moving along the graph and a pulsing self-loop,
+- node fill colors that preserve the current state value and boundary colors that mark the update role,
 - node features before and after each update,
 - normalized edge weights,
 - the learnable weight matrix,
 - per-neighbour messages for a selected target node,
 - the result after stacking a second GNN layer.
 
-The goal is to make message passing visible through an app-like workflow rather than a sequence of static images. Students can drag, zoom, and hover over the PyVis graph, follow red message arrows and the animated message-flow strip, click an update button, and watch node values and colors change in place while the right-hand panel explains the current formula, weight matrix, messages, and target-node result.
+The goal is to make message passing visible through an app-like workflow rather than a sequence of static images. Students can drag, zoom, and hover over the PyVis graph, follow red message arrows and the animated message-flow strip, click an update button, and watch node values and state colors change in place while boundary colors identify the current target, message-source neighbours, and nodes not used in the selected update.
 
 ### Part B: Real Graph Comparison
 
