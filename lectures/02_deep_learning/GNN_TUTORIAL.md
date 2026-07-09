@@ -1,0 +1,46 @@
+# GNN Tutorial Notebook
+
+This note links the Colab-ready tutorial for the graph neural network part of the deep learning lecture.
+
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/02_deep_learning/notebooks/gnn_visual_message_passing_colab.ipynb)
+
+## Notebook
+
+- `notebooks/gnn_visual_message_passing_colab.ipynb`
+
+## Teaching Structure
+
+The notebook is designed for the third deep learning topic after neural networks/CNNs and transformers.
+
+### Part A: Visual Message Passing
+
+The first part uses a tiny graph and a hand-picked GCN-style update:
+
+```text
+H = ReLU(A_hat X W)
+```
+
+Students can inspect:
+
+- node features before and after each update,
+- normalized edge weights,
+- the learnable weight matrix,
+- per-neighbour messages for a selected target node,
+- the result after stacking a second GNN layer.
+
+The goal is to make message passing visible through tables, graph drawings, node colors, edge labels, and explicit numeric updates.
+
+### Part B: Real Graph Comparison
+
+The second part uses the Cora citation network through PyTorch Geometric.
+
+It compares:
+
+- a feature-only MLP, which ignores graph edges,
+- a GCN, which uses the same features plus neighbourhood structure.
+
+The intended teaching point is that neighbourhood information can clearly improve node classification when connected observations are related. This is the bridge to geospatial AI examples where nearby cells, adjacent roads, linked images, or connected places often carry useful context.
+
+## Colab Notes
+
+The notebook installs `torch-geometric` in the first setup cell and keeps all execution outputs cleared in the repository. Students can open it in Colab and run from top to bottom.
