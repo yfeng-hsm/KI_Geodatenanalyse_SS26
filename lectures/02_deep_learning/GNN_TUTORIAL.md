@@ -29,8 +29,10 @@ river, street, mixed
 The GCN-style update is still:
 
 ```text
-H = ReLU(A_hat X W)
+H_next = ReLU(0.25 * H_current + 0.75 * A_hat H_current W)
 ```
+
+The residual/self-retention term is included for teaching stability: it keeps part of each node's own evidence while neighbourhood messages are mixed in. Without this, a second layer can over-smooth boundary nodes and make some classifications worse.
 
 Students can inspect:
 
@@ -42,13 +44,14 @@ Students can inspect:
 - current node predictions shown as `river`, `street`, or `mixed`,
 - boundary colors that mark the update role: red for the current target, yellow for neighbours, black for other nodes,
 - one-hop and two-hop receptive field explanations,
+- a note that wider receptive fields are useful only when they preserve relevant local evidence,
 - node features before and after each update,
 - normalized edge weights,
 - the learnable weight matrix,
 - per-neighbour messages for a selected target node,
 - the result after stacking a second GNN layer.
 
-The goal is to make message passing visible through an app-like workflow rather than a sequence of static images. Students follow red message arrows and animated dots inside the graph, click an update button, and watch hidden-state lights and class predictions change in place. The intentionally ambiguous crossing node starts closer to `mixed`; after it absorbs neighbourhood evidence, the `street` signal becomes stronger. The right-hand panel visualizes how source hidden states, the weight matrix, fixed edge weights, message vectors, summation, and ReLU produce the next target state and prediction.
+The goal is to make message passing visible through an app-like workflow rather than a sequence of static images. Students follow red message arrows and animated dots inside the graph, click an update button, and watch hidden-state lights and class predictions change in place. The intentionally ambiguous crossing node starts closer to `mixed`; after it absorbs neighbourhood evidence, the `street` signal becomes stronger. The right-hand panel visualizes how source hidden states, the weight matrix, fixed edge weights, residual self-retention, message vectors, summation, and ReLU produce the next target state and prediction.
 
 ### Part B: Real Graph Comparison
 
