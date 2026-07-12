@@ -52,6 +52,12 @@ To save the full API response, including bike-level records:
 python3 -m data_loaders.meinrad.src.meinrad_snapshot --save-raw
 ```
 
+For long collection runs, prefer compressed raw output:
+
+```bash
+python3 -m data_loaders.meinrad.src.meinrad_snapshot --save-raw --compress-raw
+```
+
 Use this only when the teaching or research question requires vehicle-level information. For most course exercises, the station-level CSV is enough and avoids unnecessary collection of individual bike identifiers.
 
 ## Suggested Collection Schedule
@@ -73,8 +79,18 @@ This repository includes `.github/workflows/collect-meinrad-2-weeks.yml` for a t
 - Interval: every 15 minutes at `:00`, `:15`, `:30`, and `:45`
 - Output folder: `data_loaders/meinrad/data/`
 - Timestamp fields: both `collected_at_utc` and `collected_at_germany`
+- Files per run: station CSV, summary JSON, and complete raw API response as `.json.gz`
 
-The workflow commits collected CSV and summary JSON files back to the repository. It can also be triggered manually from the GitHub Actions tab with `force_collect=true`.
+The workflow commits collected CSV, summary JSON, and compressed raw JSON files back to the repository. It can also be triggered manually from the GitHub Actions tab with `force_collect=true`.
+
+One sampled run on 2026-07-12 produced approximately:
+
+- station CSV: 45 KB
+- summary JSON: 1 KB
+- raw API JSON uncompressed: 748 KB
+- raw API JSON compressed: 28-36 KB
+
+At a 15-minute interval for 14 days, this is 1,344 snapshots. Expected repository working-tree size is roughly 100-110 MB when storing compressed raw JSON, or about 1.0 GB if raw JSON is kept uncompressed.
 
 ## Teaching Uses
 

@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import gzip
 import json
 import os
 import sys
@@ -192,11 +193,20 @@ def write_json(path: Path, data: dict[str, Any]) -> None:
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def write_json_gzip(path: Path, data: dict[str, Any]) -> None:
+    """Write compressed UTF-8 JSON."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with gzip.open(path, "wt", encoding="utf-8") as handle:
+        json.dump(data, handle, ensure_ascii=False, separators=(",", ":"))
+        handle.write("\n")
+
+
 def collect_snapshot(
     output_dir: Path,
     domain: str = DEFAULT_DOMAIN,
     city_uid: int = DEFAULT_CITY_UID,
     save_raw: bool = False,
+    compress_raw: bool = False,
     timeout_seconds: int = DEFAULT_TIMEOUT_SECONDS,
     timestamp_timezone: str = DEFAULT_TIMESTAMP_TIMEZONE,
 ) -> dict[str, Any]:
@@ -219,8 +229,12 @@ def collect_snapshot(
 
     raw_path = None
     if save_raw:
-        raw_path = output_dir / f"meinrad_mainz_raw_berlin_{stamp}.json"
-        write_json(raw_path, payload)
+        if compress_raw:
+            raw_path = output_dir / f"meinrad_mainz_raw_berlin_{stamp}.json.gz"
+            write_json_gzip(raw_path, payload)
+        else:
+            raw_path = output_dir / f"meinrad_mainz_raw_berlin_{stamp}.json"
+            write_json(raw_path, payload)
 
     return {
         "summary": summary,
@@ -253,6 +267,11 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         help="Also save the complete API response, including bike-level records.",
     )
     parser.add_argument(
+        "--compress-raw",
+        action="store_true",
+        help="Save the complete raw API response as .json.gz. Requires --save-raw.",
+    )
+    parser.add_argument(
         "--timeout",
         type=int,
         default=DEFAULT_TIMEOUT_SECONDS,
@@ -274,6 +293,7 @@ def main(argv: list[str] | None = None) -> int:
             domain=args.domain,
             city_uid=args.city_uid,
             save_raw=args.save_raw,
+            compress_raw=args.compress_raw,
             timeout_seconds=args.timeout,
             timestamp_timezone=args.timestamp_timezone,
         )
