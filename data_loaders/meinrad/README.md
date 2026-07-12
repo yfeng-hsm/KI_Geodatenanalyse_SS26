@@ -77,12 +77,33 @@ This repository includes `.github/workflows/collect-meinrad-2-weeks.yml` for a t
 - Start: `2026-07-12 13:00 Europe/Berlin`
 - End: `2026-07-26 12:00 Europe/Berlin`
 - Trigger: external cron-job.org `workflow_dispatch`
+- Cron dashboard: <https://console.cron-job.org/>
 - Interval: every 15 minutes at `:00`, `:15`, `:30`, and `:45` in `Europe/Berlin`
 - Output folder: `data_loaders/meinrad/data/`
 - Timestamp fields: both `collected_at_utc` and `collected_at_germany`
 - Files per run: station CSV, summary JSON, and complete raw API response as `.json.gz`
 
 The workflow commits collected CSV, summary JSON, and compressed raw JSON files back to the repository. GitHub's native `schedule` trigger is intentionally disabled to avoid duplicate runs when the external cron service triggers the same workflow. It can also be triggered manually from the GitHub Actions tab with `force_collect=true`.
+
+External cron calls the GitHub workflow dispatch endpoint:
+
+```text
+POST https://api.github.com/repos/yfeng-hsm/KI_Geodatenanalyse_SS26/actions/workflows/collect-meinrad-2-weeks.yml/dispatches
+```
+
+Required headers:
+
+```text
+Authorization: Bearer <YOUR_GITHUB_TOKEN>
+Accept: application/vnd.github+json
+Content-Type: application/json
+```
+
+Request body:
+
+```json
+{"ref":"main","inputs":{"force_collect":"false"}}
+```
 
 One sampled run on 2026-07-12 produced approximately:
 
