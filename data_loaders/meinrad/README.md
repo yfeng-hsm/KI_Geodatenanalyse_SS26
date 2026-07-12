@@ -40,7 +40,7 @@ The CSV keeps station/place-level attributes such as coordinates, available bike
 
 - `notebooks/meinrad_mainz_live_dynamic_map.ipynb`
 
-The notebook reads all collected snapshot CSV files, maps the latest station availability, and creates an animated map when several snapshots are available.
+The notebook reads all collected snapshot CSV files, maps the latest station availability with Folium, and creates a Leaflet time-slider map when several snapshots are available.
 
 When no snapshot CSV exists yet, the notebook automatically collects one live snapshot before loading. To generate a quick animation in Colab, set `COLLECT_NEW_SNAPSHOTS = True`; the default demo interval is 30 seconds between snapshots.
 
