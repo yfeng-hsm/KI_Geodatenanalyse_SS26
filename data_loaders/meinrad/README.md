@@ -36,9 +36,9 @@ The CSV keeps station/place-level attributes such as coordinates, available bike
 
 ## Notebook
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/data_loaders/meinrad/notebooks/meinrad_mainz_dynamic_map.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/data_loaders/meinrad/notebooks/meinrad_mainz_live_dynamic_map.ipynb)
 
-- `notebooks/meinrad_mainz_dynamic_map.ipynb`
+- `notebooks/meinrad_mainz_live_dynamic_map.ipynb`
 
 The notebook reads all collected snapshot CSV files, maps the latest station availability, and creates an animated map when several snapshots are available.
 

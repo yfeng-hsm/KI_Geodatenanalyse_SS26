@@ -17,7 +17,7 @@ Each dataset folder follows the same basic idea:
 | `airbnb/` | Inside Airbnb data | [Open in Colab](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/data_loaders/airbnb/notebooks/airbnb_munich_points.ipynb) | Listing points, tabular features, neighbourhood aggregation |
 | `mapillary/` | Mapillary street-level imagery metadata | [Open in Colab](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/data_loaders/mapillary/notebooks/mapillary_api_loader_mainz.ipynb) | API access, image metadata, point/buffer/trajectory queries |
 | `osm_unfall_atlas/` | OSM and Unfallatlas data | Planned | Spatial analysis, graph features, accident analysis |
-| `meinrad/` | meinRad Mainz bike-sharing snapshots | [Open in Colab](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/data_loaders/meinrad/notebooks/meinrad_mainz_dynamic_map.ipynb) | Live API snapshots, station availability, temporal demand proxies |
+| `meinrad/` | meinRad Mainz bike-sharing snapshots | [Open in Colab](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/data_loaders/meinrad/notebooks/meinrad_mainz_live_dynamic_map.ipynb) | Live API snapshots, station availability, temporal demand proxies |
 
 ## Suggested Dataset Folder Structure
 
