@@ -30,7 +30,8 @@ Note: the course is planned as five lectures. The ethics and bias topic is place
     ├── zensus/
     ├── airbnb/
     ├── mapillary/
-    └── osm_unfall_atlas/
+    ├── osm_unfall_atlas/
+    └── meinrad/
 ```
 
 ## Teaching Design Principles
@@ -49,5 +50,6 @@ The `data_loaders/` folder is reserved for reusable project data access code and
 2. Airbnb data
 3. Mapillary data
 4. OSM Unfallatlas data
+5. meinRad Mainz bike-sharing snapshots
 
 Each dataset folder should eventually contain dataset documentation, setup instructions, preprocessing notes, and Python loader utilities.
