@@ -40,9 +40,9 @@ The CSV keeps station/place-level attributes such as coordinates, available bike
 
 - `notebooks/meinrad_mainz_live_dynamic_map.ipynb`
 
-The notebook reads snapshot CSV files already collected by GitHub Actions, maps the latest station availability with Folium, and creates a Leaflet time-slider map when several snapshots are available.
+The notebook reads snapshot CSV files already collected by GitHub Actions, maps the latest station availability with Folium, and creates a Leaflet time-slider map when several snapshots are available. If the CSV files are not present locally, it downloads the already-committed snapshot CSVs from this GitHub repository.
 
-The notebook is intentionally read-only: it does not call the live API and does not create new snapshots. If no snapshot CSV exists yet, wait for GitHub Actions to collect data or reopen the latest repository version.
+The notebook is intentionally read-only: it does not call the live meinRad API and does not create new snapshots. If no snapshot CSV exists yet in the repository, wait for GitHub Actions to collect data and commit it.
 
 ## Optional Raw Response
 
