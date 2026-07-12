@@ -20,7 +20,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  START_AT_BERLIN: "2026-07-12T12:00:00+02:00"
+  START_AT_BERLIN: "2026-07-12T13:00:00+02:00"
   END_AT_BERLIN: "2026-07-26T12:00:00+02:00"
   OUTPUT_DIR: "data_loaders/meinrad/data"
 

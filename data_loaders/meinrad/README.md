@@ -74,7 +74,7 @@ Example cron-style schedule:
 
 This repository includes `.github/workflows/collect-meinrad-2-weeks.yml` for a two-week collection run that does not depend on a local computer staying awake.
 
-- Start: `2026-07-12 12:00 Europe/Berlin`
+- Start: `2026-07-12 13:00 Europe/Berlin`
 - End: `2026-07-26 12:00 Europe/Berlin`
 - Trigger: external cron-job.org `workflow_dispatch`
 - Interval: every 15 minutes at `:00`, `:15`, `:30`, and `:45` in `Europe/Berlin`
