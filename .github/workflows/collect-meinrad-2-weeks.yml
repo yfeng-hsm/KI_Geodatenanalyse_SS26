@@ -1,9 +1,6 @@
 name: Collect meinRad Mainz snapshots
 
 on:
-  schedule:
-    # Quarter-hour runs. The minute stays :00/:15/:30/:45 in Europe/Berlin.
-    - cron: "*/15 * * * *"
   workflow_dispatch:
     inputs:
       force_collect:
