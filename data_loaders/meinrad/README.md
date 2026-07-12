@@ -64,6 +64,18 @@ Example cron-style schedule:
 */10 * * * * cd /path/to/KI_Geodatenanalyse_SS26 && python3 -m data_loaders.meinrad.src.meinrad_snapshot
 ```
 
+## GitHub Actions Collection
+
+This repository includes `.github/workflows/collect-meinrad-2-weeks.yml` for a two-week collection run that does not depend on a local computer staying awake.
+
+- Start: `2026-07-12 12:00 Europe/Berlin`
+- End: `2026-07-26 12:00 Europe/Berlin`
+- Interval: every 15 minutes at `:00`, `:15`, `:30`, and `:45`
+- Output folder: `data_loaders/meinrad/data/`
+- Timestamp fields: both `collected_at_utc` and `collected_at_germany`
+
+The workflow commits collected CSV and summary JSON files back to the repository. It can also be triggered manually from the GitHub Actions tab with `force_collect=true`.
+
 ## Teaching Uses
 
 - Real-time JSON API access

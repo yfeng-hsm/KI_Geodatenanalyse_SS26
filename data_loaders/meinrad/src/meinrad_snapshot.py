@@ -9,7 +9,9 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import os
 import sys
+import time as time_module
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -20,6 +22,7 @@ from urllib.request import Request, urlopen
 DEFAULT_DOMAIN = "mz"
 DEFAULT_CITY_UID = 755
 DEFAULT_TIMEOUT_SECONDS = 30
+DEFAULT_TIMESTAMP_TIMEZONE = "Europe/Berlin"
 NEXTBIKE_URL = "https://api.nextbike.net/maps/nextbike-live.json"
 
 
@@ -69,10 +72,39 @@ def select_city(
     )
 
 
+def convert_utc_to_timezone(utc_dt: datetime, timezone_name: str) -> datetime:
+    """Convert a UTC datetime to a named timezone without requiring extra packages."""
+    if timezone_name in {"UTC", "Etc/UTC", "Z"}:
+        return utc_dt.astimezone(timezone.utc)
+
+    try:
+        from zoneinfo import ZoneInfo
+
+        return utc_dt.astimezone(ZoneInfo(timezone_name))
+    except Exception:
+        if not hasattr(time_module, "tzset"):
+            raise MeinRadSnapshotError(
+                f"Timezone {timezone_name!r} requires Python zoneinfo support."
+            )
+
+        old_tz = os.environ.get("TZ")
+        try:
+            os.environ["TZ"] = timezone_name
+            time_module.tzset()
+            return utc_dt.astimezone()
+        finally:
+            if old_tz is None:
+                os.environ.pop("TZ", None)
+            else:
+                os.environ["TZ"] = old_tz
+            time_module.tzset()
+
+
 def build_summary(
     country: dict[str, Any],
     city: dict[str, Any],
     collected_at_utc: str,
+    collected_at_germany: str | None = None,
 ) -> dict[str, Any]:
     """Create a compact metadata summary for one snapshot."""
     places = city.get("places", [])
@@ -80,6 +112,7 @@ def build_summary(
     floating_bikes = [place for place in places if place.get("bike")]
     return {
         "collected_at_utc": collected_at_utc,
+        "collected_at_germany": collected_at_germany,
         "system_name": country.get("name"),
         "domain": country.get("domain"),
         "city_uid": city.get("uid"),
@@ -101,6 +134,7 @@ def flatten_places(
     country: dict[str, Any],
     city: dict[str, Any],
     collected_at_utc: str,
+    collected_at_germany: str | None = None,
 ) -> list[dict[str, Any]]:
     """Flatten nextbike places to one row per station/place."""
     rows: list[dict[str, Any]] = []
@@ -108,6 +142,7 @@ def flatten_places(
         rows.append(
             {
                 "collected_at_utc": collected_at_utc,
+                "collected_at_germany": collected_at_germany,
                 "system_name": country.get("name"),
                 "domain": country.get("domain"),
                 "city_uid": city.get("uid"),
@@ -163,25 +198,28 @@ def collect_snapshot(
     city_uid: int = DEFAULT_CITY_UID,
     save_raw: bool = False,
     timeout_seconds: int = DEFAULT_TIMEOUT_SECONDS,
+    timestamp_timezone: str = DEFAULT_TIMESTAMP_TIMEZONE,
 ) -> dict[str, Any]:
     """Fetch, validate, flatten, and write one meinRad snapshot."""
     collected_at = datetime.now(timezone.utc)
     collected_at_utc = collected_at.isoformat(timespec="seconds")
-    stamp = collected_at.strftime("%Y%m%dT%H%M%SZ")
+    collected_at_local = convert_utc_to_timezone(collected_at, timestamp_timezone)
+    collected_at_germany = collected_at_local.isoformat(timespec="seconds")
+    stamp = collected_at_local.strftime("%Y%m%dT%H%M%S")
 
     payload = fetch_live_data(domain=domain, timeout_seconds=timeout_seconds)
     country, city = select_city(payload, city_uid=city_uid)
-    summary = build_summary(country, city, collected_at_utc)
-    rows = flatten_places(country, city, collected_at_utc)
+    summary = build_summary(country, city, collected_at_utc, collected_at_germany)
+    rows = flatten_places(country, city, collected_at_utc, collected_at_germany)
 
-    csv_path = output_dir / f"meinrad_mainz_places_{stamp}.csv"
-    summary_path = output_dir / f"meinrad_mainz_summary_{stamp}.json"
+    csv_path = output_dir / f"meinrad_mainz_places_berlin_{stamp}.csv"
+    summary_path = output_dir / f"meinrad_mainz_summary_berlin_{stamp}.json"
     write_csv(csv_path, rows)
     write_json(summary_path, summary)
 
     raw_path = None
     if save_raw:
-        raw_path = output_dir / f"meinrad_mainz_raw_{stamp}.json"
+        raw_path = output_dir / f"meinrad_mainz_raw_berlin_{stamp}.json"
         write_json(raw_path, payload)
 
     return {
@@ -220,6 +258,11 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         default=DEFAULT_TIMEOUT_SECONDS,
         help="Network timeout in seconds.",
     )
+    parser.add_argument(
+        "--timestamp-timezone",
+        default=DEFAULT_TIMESTAMP_TIMEZONE,
+        help="Timezone used for local timestamp columns and filenames.",
+    )
     return parser.parse_args(argv)
 
 
@@ -232,6 +275,7 @@ def main(argv: list[str] | None = None) -> int:
             city_uid=args.city_uid,
             save_raw=args.save_raw,
             timeout_seconds=args.timeout,
+            timestamp_timezone=args.timestamp_timezone,
         )
     except MeinRadSnapshotError as exc:
         print(f"ERROR: {exc}", file=sys.stderr)

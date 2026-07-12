@@ -1,0 +1,98 @@
+name: Collect meinRad Mainz snapshots
+
+on:
+  schedule:
+    # Quarter-hour runs. The minute stays :00/:15/:30/:45 in Europe/Berlin.
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      force_collect:
+        description: "Collect one snapshot even outside the configured two-week window"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: meinrad-snapshot-collection
+  cancel-in-progress: false
+
+env:
+  START_AT_BERLIN: "2026-07-12T12:00:00+02:00"
+  END_AT_BERLIN: "2026-07-26T12:00:00+02:00"
+  OUTPUT_DIR: "data_loaders/meinrad/data"
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check collection window
+        id: window
+        env:
+          FORCE_COLLECT: ${{ github.event.inputs.force_collect || 'false' }}
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import os
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+
+          now = datetime.now(ZoneInfo("Europe/Berlin"))
+          start = datetime.fromisoformat(os.environ["START_AT_BERLIN"])
+          end = datetime.fromisoformat(os.environ["END_AT_BERLIN"])
+          force = os.environ.get("FORCE_COLLECT") == "true"
+          should_collect = force or (start <= now < end)
+
+          print(f"collect={'true' if should_collect else 'false'}")
+          print(f"now_berlin={now.isoformat(timespec='seconds')}")
+          print(f"start_berlin={start.isoformat(timespec='seconds')}")
+          print(f"end_berlin={end.isoformat(timespec='seconds')}")
+          PY
+
+      - name: Report skipped run
+        if: steps.window.outputs.collect != 'true'
+        run: |
+          echo "Skipping collection."
+          echo "Now Europe/Berlin: ${{ steps.window.outputs.now_berlin }}"
+          echo "Window: $START_AT_BERLIN to $END_AT_BERLIN"
+
+      - name: Check out repository
+        if: steps.window.outputs.collect == 'true'
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        if: steps.window.outputs.collect == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Collect snapshot
+        if: steps.window.outputs.collect == 'true'
+        run: |
+          python -m data_loaders.meinrad.src.meinrad_snapshot \
+            --output-dir "$OUTPUT_DIR" \
+            --timestamp-timezone Europe/Berlin
+
+      - name: Commit collected snapshot
+        if: steps.window.outputs.collect == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f "$OUTPUT_DIR"/meinrad_mainz_places_berlin_*.csv
+          git add -f "$OUTPUT_DIR"/meinrad_mainz_summary_berlin_*.json
+
+          if git diff --cached --quiet; then
+            echo "No new snapshot files to commit."
+            exit 0
+          fi
+
+          git commit -m "Collect meinRad snapshot ${{ steps.window.outputs.now_berlin }}"
+          git pull --rebase origin main
+          git push origin HEAD:main

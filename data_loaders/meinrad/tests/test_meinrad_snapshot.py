@@ -1,8 +1,10 @@
 import unittest
+from datetime import datetime, timezone
 
 from data_loaders.meinrad.src.meinrad_snapshot import (
     MeinRadSnapshotError,
     build_summary,
+    convert_utc_to_timezone,
     flatten_places,
     select_city,
 )
@@ -72,21 +74,39 @@ class MeinRadSnapshotTests(unittest.TestCase):
 
     def test_build_summary_counts_place_types(self):
         country, city = select_city(self.payload)
-        summary = build_summary(country, city, "2026-07-12T10:00:00+00:00")
+        summary = build_summary(
+            country,
+            city,
+            "2026-07-12T10:00:00+00:00",
+            "2026-07-12T12:00:00+02:00",
+        )
 
         self.assertEqual(summary["places_returned"], 2)
         self.assertEqual(summary["station_places"], 1)
         self.assertEqual(summary["floating_bike_places"], 1)
         self.assertEqual(summary["available_bikes"], 4)
+        self.assertEqual(summary["collected_at_germany"], "2026-07-12T12:00:00+02:00")
 
     def test_flatten_places_omits_bike_identifiers(self):
         country, city = select_city(self.payload)
-        rows = flatten_places(country, city, "2026-07-12T10:00:00+00:00")
+        rows = flatten_places(
+            country,
+            city,
+            "2026-07-12T10:00:00+00:00",
+            "2026-07-12T12:00:00+02:00",
+        )
 
         self.assertEqual(len(rows), 2)
+        self.assertEqual(rows[0]["collected_at_germany"], "2026-07-12T12:00:00+02:00")
         self.assertEqual(rows[0]["bike_count_from_list"], 3)
         self.assertNotIn("bike_list", rows[0])
         self.assertNotIn("bike_numbers", rows[0])
+
+    def test_convert_utc_to_germany_summer_time(self):
+        utc_dt = datetime(2026, 7, 12, 10, 0, tzinfo=timezone.utc)
+        germany_dt = convert_utc_to_timezone(utc_dt, "Europe/Berlin")
+
+        self.assertEqual(germany_dt.isoformat(timespec="seconds"), "2026-07-12T12:00:00+02:00")
 
 
 if __name__ == "__main__":
