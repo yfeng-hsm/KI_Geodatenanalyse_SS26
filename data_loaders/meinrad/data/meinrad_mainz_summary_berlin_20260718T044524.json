@@ -1,0 +1,25 @@
+{
+  "collected_at_utc": "2026-07-18T02:45:24+00:00",
+  "collected_at_germany": "2026-07-18T04:45:24+02:00",
+  "system_name": "meinRad",
+  "domain": "mz",
+  "city_uid": 755,
+  "city_name": "Mainz",
+  "num_places": 201,
+  "places_returned": 200,
+  "station_places": 190,
+  "floating_bike_places": 10,
+  "set_point_bikes": 1403,
+  "available_bikes": 1202,
+  "return_to_official_only": true,
+  "refresh_rate": "10120",
+  "bike_types": {
+    "121": 1,
+    "188": 581,
+    "191": 385,
+    "225": 40,
+    "295": 125,
+    "348": 119
+  },
+  "source_url": "https://api.nextbike.net/maps/nextbike-live.json?domains=mz"
+}
