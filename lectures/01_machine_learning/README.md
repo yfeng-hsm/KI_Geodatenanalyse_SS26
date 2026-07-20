@@ -21,6 +21,10 @@ This lecture introduces the core machine learning workflow for geospatial data a
 - Spatial feature engineering from points, polygons, and neighborhood attributes
 - Comparing simple tabular features with spatially enriched features
 
+## Exercises
+
+- [Exercise 2.1: Supervised Learning with scikit-learn and PyTorch](exercises/exercise_2_1_supervised_learning.ipynb)
+
 ## Folder Plan
 
 ```text
