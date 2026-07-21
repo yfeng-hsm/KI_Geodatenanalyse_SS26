@@ -4,6 +4,12 @@
 
 This lecture introduces large language models and connects them to geospatial analysis workflows.
 
+## Notebook
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/03_llm_basics/notebooks/uni_mainz_ki_chat_api_test.ipynb)
+
+- [Testing the Uni Mainz KI-Chat API](notebooks/uni_mainz_ki_chat_api_test.ipynb)
+
 ## Planned Topics
 
 - Tokenization and embeddings
