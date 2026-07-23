@@ -15,12 +15,6 @@ This lecture introduces the core machine learning workflow for geospatial data a
 - Gradient boosting models
 - Model evaluation and interpretation
 
-## Possible Geospatial Examples
-
-- Airbnb price or demand prediction
-- Spatial feature engineering from points, polygons, and neighborhood attributes
-- Comparing simple tabular features with spatially enriched features
-
 ## Notebooks
 
 - [Exercise 1.1: Supervised Learning with scikit-learn and PyTorch](notebooks/exercise_1_1_supervised_learning.ipynb)
