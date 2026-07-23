@@ -24,6 +24,8 @@ This lecture introduces the core machine learning workflow for geospatial data a
 ## Exercises
 
 - [Exercise 2.1: Supervised Learning with scikit-learn and PyTorch](exercises/exercise_2_1_supervised_learning.ipynb)
+- [Exercise 1.2: Classification and Clustering on a Small Spatial Dataset](exercises/exercise_1_2_classification_clustering.ipynb)
+  ([Open in Colab](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/01_machine_learning/exercises/exercise_1_2_classification_clustering.ipynb))
 
 ## Folder Plan
 
