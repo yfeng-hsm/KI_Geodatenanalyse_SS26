@@ -21,19 +21,18 @@ This lecture introduces the core machine learning workflow for geospatial data a
 - Spatial feature engineering from points, polygons, and neighborhood attributes
 - Comparing simple tabular features with spatially enriched features
 
-## Exercises
+## Notebooks
 
-- [Exercise 2.1: Supervised Learning with scikit-learn and PyTorch](exercises/exercise_2_1_supervised_learning.ipynb)
-- [Exercise 1.2: Classification and Clustering on a Small Spatial Dataset](exercises/exercise_1_2_classification_clustering.ipynb)
-  ([Open in Colab](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/01_machine_learning/exercises/exercise_1_2_classification_clustering.ipynb))
+- [Exercise 1.2: Supervised Learning with scikit-learn and PyTorch](notebooks/exercise_1_2_supervised_learning.ipynb)
+  [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/01_machine_learning/notebooks/exercise_1_2_supervised_learning.ipynb)
+- [Exercise 1.3: Classification and Clustering on a Small Spatial Dataset](notebooks/exercise_1_3_classification_clustering.ipynb)
+  [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/01_machine_learning/notebooks/exercise_1_3_classification_clustering.ipynb)
 
 ## Folder Plan
 
 ```text
 01_machine_learning/
 ├── README.md
-├── slides/
 ├── notebooks/
-├── exercises/
 └── assets/
 ```

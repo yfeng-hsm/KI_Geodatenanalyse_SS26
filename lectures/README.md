@@ -7,10 +7,20 @@ Each lecture folder is intended to follow a consistent structure as content is a
 ```text
 lecture_folder/
 ├── README.md
-├── slides/
 ├── notebooks/
-├── exercises/
 └── assets/
 ```
 
 The current folders define the course plan. Detailed content will be developed one lecture at a time.
+
+## Current Notebooks
+
+| Lecture | Notebook | Colab |
+| --- | --- | --- |
+| 01 | [Exercise 1.2: Supervised Learning with scikit-learn and PyTorch](01_machine_learning/notebooks/exercise_1_2_supervised_learning.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/01_machine_learning/notebooks/exercise_1_2_supervised_learning.ipynb) |
+| 01 | [Exercise 1.3: Classification and Clustering on a Small Spatial Dataset](01_machine_learning/notebooks/exercise_1_3_classification_clustering.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/01_machine_learning/notebooks/exercise_1_3_classification_clustering.ipynb) |
+| 02 | [Exercise 2.1: Basic Neural Network Training with PyTorch](02_deep_learning/notebooks/exercise_2_1_basic_neural_network_tabular.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/02_deep_learning/notebooks/exercise_2_1_basic_neural_network_tabular.ipynb) |
+| 02 | [Exercise 2.2: A Small CNN for MNIST with PyTorch](02_deep_learning/notebooks/exercise_2_2_mnist_cnn_pytorch.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/02_deep_learning/notebooks/exercise_2_2_mnist_cnn_pytorch.ipynb) |
+| 02 | [Graph Neural Networks: Visual Demo and Training Exercise](02_deep_learning/notebooks/gnn_visual_message_passing_colab.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/02_deep_learning/notebooks/gnn_visual_message_passing_colab.ipynb) |
+| 03 | [Testing the Uni Mainz KI-Chat API](03_llm_basics/notebooks/uni_mainz_ki_chat_api_test.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/03_llm_basics/notebooks/uni_mainz_ki_chat_api_test.ipynb) |
+| 03 | [Testing the AcademicCloud/GWDG SAIA Chat AI API](03_llm_basics/notebooks/academiccloud_saia_api_test.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/03_llm_basics/notebooks/academiccloud_saia_api_test.ipynb) |

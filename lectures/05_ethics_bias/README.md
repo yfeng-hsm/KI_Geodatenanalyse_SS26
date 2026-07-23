@@ -25,8 +25,6 @@ This lecture focuses on responsible AI for geospatial applications. It connects 
 ```text
 05_ethics_bias/
 ├── README.md
-├── slides/
 ├── notebooks/
-├── exercises/
 └── assets/
 ```

@@ -26,8 +26,6 @@ This lecture reviews common spatial data analysis concepts and tools that suppor
 ```text
 04_spatial_data_analysis/
 ├── README.md
-├── slides/
 ├── notebooks/
-├── exercises/
 └── assets/
 ```

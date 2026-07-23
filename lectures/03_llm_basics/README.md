@@ -39,8 +39,6 @@ This lecture introduces large language models and connects them to geospatial an
 ```text
 03_llm_basics/
 ├── README.md
-├── slides/
 ├── notebooks/
-├── exercises/
 └── assets/
 ```

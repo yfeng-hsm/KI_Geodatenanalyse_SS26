@@ -19,20 +19,20 @@ This lecture introduces neural networks and the main deep learning architectures
 - Spatial graph modeling with road networks or points of interest
 - Comparing CNN, Transformer, and GNN assumptions
 
-## Exercises
+## Notebooks
 
-- [Exercise 2.1: Basic Neural Network Training with PyTorch](exercises/exercise_2_1_basic_neural_network_tabular.ipynb)
-  ([Open in Colab](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/02_deep_learning/exercises/exercise_2_1_basic_neural_network_tabular.ipynb))
-- [Exercise 2.2: A Small CNN for MNIST with PyTorch](exercises/exercise_2_2_mnist_cnn_pytorch.ipynb)
-  ([Open in Colab](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/02_deep_learning/exercises/exercise_2_2_mnist_cnn_pytorch.ipynb))
+- [Exercise 2.1: Basic Neural Network Training with PyTorch](notebooks/exercise_2_1_basic_neural_network_tabular.ipynb)
+  [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/02_deep_learning/notebooks/exercise_2_1_basic_neural_network_tabular.ipynb)
+- [Exercise 2.2: A Small CNN for MNIST with PyTorch](notebooks/exercise_2_2_mnist_cnn_pytorch.ipynb)
+  [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/02_deep_learning/notebooks/exercise_2_2_mnist_cnn_pytorch.ipynb)
+- [Graph Neural Networks: Visual Demo and Training Exercise](notebooks/gnn_visual_message_passing_colab.ipynb)
+  [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/02_deep_learning/notebooks/gnn_visual_message_passing_colab.ipynb)
 
 ## Folder Plan
 
 ```text
 02_deep_learning/
 ├── README.md
-├── slides/
 ├── notebooks/
-├── exercises/
 └── assets/
 ```
