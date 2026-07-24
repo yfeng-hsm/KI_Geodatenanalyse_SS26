@@ -2,15 +2,15 @@
 
 This note links the Colab-ready tutorial for the graph neural network part of the deep learning lecture.
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/02_deep_learning/notebooks/gnn_visual_message_passing_colab.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/02_deep_learning/notebooks/exercise_2_3_gnn_visual_message_passing_colab.ipynb)
 
 ## Notebook
 
-- `notebooks/gnn_visual_message_passing_colab.ipynb`
+- `notebooks/exercise_2_3_gnn_visual_message_passing_colab.ipynb`
 
 ## Teaching Plan
 
-- `GNN_VISUALIZATION_PLAN.md`
+- `assets/gnn_visualization_plan.md`
 
 ## Teaching Structure
 

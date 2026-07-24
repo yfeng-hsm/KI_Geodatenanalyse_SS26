@@ -22,11 +22,19 @@ This lecture introduces the core machine learning workflow for geospatial data a
 - [Exercise 1.2: Classification and Clustering on a Small Spatial Dataset](notebooks/exercise_1_2_classification_clustering.ipynb)
   [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/01_machine_learning/notebooks/exercise_1_2_classification_clustering.ipynb)
 
+## German Version
+
+- [Uebung 1.1: Ueberwachtes Lernen mit scikit-learn und PyTorch](german_version/exercise_1_1_supervised_learning_de.ipynb)
+  [![In Colab oeffnen](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/01_machine_learning/german_version/exercise_1_1_supervised_learning_de.ipynb)
+- [Uebung 1.2: Klassifikation und Clustering auf einem kleinen raeumlichen Datensatz](german_version/exercise_1_2_classification_clustering_de.ipynb)
+  [![In Colab oeffnen](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/01_machine_learning/german_version/exercise_1_2_classification_clustering_de.ipynb)
+
 ## Folder Plan
 
 ```text
 01_machine_learning/
 ├── README.md
 ├── notebooks/
+├── german_version/
 └── assets/
 ```
