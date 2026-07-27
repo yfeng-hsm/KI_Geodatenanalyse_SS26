@@ -1,0 +1,23 @@
+{
+  "source": "https://api.openstreetmap.org/api/0.6/map?bbox=8.265,49.996,8.282,50.005",
+  "downloaded_for": "KI_Geodatenanalyse_SS26 Lecture 03 DuckDB LLM SQL exercise",
+  "bbox_west_south_east_north": [
+    8.265,
+    49.996,
+    8.282,
+    50.005
+  ],
+  "rows": 3721,
+  "tag_key_counts": {
+    "amenity": 1095,
+    "highway": 1653,
+    "historic": 131,
+    "leisure": 67,
+    "office": 100,
+    "public_transport": 63,
+    "railway": 23,
+    "shop": 481,
+    "tourism": 108
+  },
+  "license": "OpenStreetMap data © OpenStreetMap contributors, ODbL 1.0"
+}
