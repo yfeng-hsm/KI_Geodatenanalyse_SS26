@@ -19,11 +19,11 @@ This lecture introduces large language models and connects them to geospatial an
 - [Testing the AcademicCloud/GWDG SAIA Chat AI API](notebooks/academiccloud_saia_api_test.ipynb)
 
 
-### Exercise 3.1: Mainz OSM Tool-Using LLM Widget
+### Exercise 3.1: Mainz OSM Query Planner with an LLM
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/03_llm_basics/notebooks/exercise_3_1_llm_osm_tool_widget_mainz.ipynb)
 
-- [Exercise 3.1: Build a Mainz OSM Tool-Using LLM Widget](notebooks/exercise_3_1_llm_osm_tool_widget_mainz.ipynb)
+- [Exercise 3.1: Mainz OSM Query Planner with an LLM](notebooks/exercise_3_1_llm_osm_tool_widget_mainz.ipynb)
 
 ## Planned Topics
 
