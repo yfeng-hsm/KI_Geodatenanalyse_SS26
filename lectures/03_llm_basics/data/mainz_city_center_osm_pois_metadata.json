@@ -1,23 +1,45 @@
 {
-  "source": "https://api.openstreetmap.org/api/0.6/map?bbox=8.265,49.996,8.282,50.005",
+  "source": "https://api.openstreetmap.org/api/0.6/map?bbox=8.254,49.996,8.282,50.005",
   "downloaded_for": "KI_Geodatenanalyse_SS26 Lecture 03 DuckDB LLM SQL exercise",
   "bbox_west_south_east_north": [
-    8.265,
+    8.254,
     49.996,
     8.282,
     50.005
   ],
-  "rows": 3721,
+  "rows": 7698,
   "tag_key_counts": {
-    "amenity": 1095,
-    "highway": 1653,
-    "historic": 131,
-    "leisure": 67,
-    "office": 100,
-    "public_transport": 63,
-    "railway": 23,
-    "shop": 481,
-    "tourism": 108
+    "amenity": 1955,
+    "highway": 3680,
+    "historic": 185,
+    "leisure": 138,
+    "office": 136,
+    "public_transport": 165,
+    "railway": 619,
+    "shop": 647,
+    "tourism": 173
+  },
+  "known_place_coverage": {
+    "mainz_hbf": {
+      "lat": 50.001,
+      "lon": 8.2587,
+      "inside_bbox": true
+    },
+    "mainz_dom": {
+      "lat": 49.9995,
+      "lon": 8.2742,
+      "inside_bbox": true
+    },
+    "mainz_theater": {
+      "lat": 50.0002,
+      "lon": 8.2714,
+      "inside_bbox": true
+    },
+    "jgu": {
+      "lat": 49.9936,
+      "lon": 8.2419,
+      "inside_bbox": false
+    }
   },
   "license": "OpenStreetMap data © OpenStreetMap contributors, ODbL 1.0"
 }
