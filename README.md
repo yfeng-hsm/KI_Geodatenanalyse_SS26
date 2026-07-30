@@ -46,14 +46,6 @@ Note: the course is planned as five lectures. The ethics and bias topic is place
 | 03 LLM Basics | [Testing the Uni Mainz KI-Chat API](lectures/03_llm_basics/notebooks/uni_mainz_ki_chat_api_test.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/03_llm_basics/notebooks/uni_mainz_ki_chat_api_test.ipynb) |
 | 03 LLM Basics | [Testing the AcademicCloud/GWDG SAIA Chat AI API](lectures/03_llm_basics/notebooks/academiccloud_saia_api_test.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/03_llm_basics/notebooks/academiccloud_saia_api_test.ipynb) |
 
-## Teaching Design Principles
-
-- Start from transparent and inspectable models before moving to more complex architectures.
-- Keep geospatial examples central, instead of treating geodata as a generic tabular or image dataset.
-- Use one or more shared project datasets across lectures so students can compare methods on familiar data.
-- Separate conceptual material, practical notebooks, assignments, and reusable data access code.
-- Make model limitations, uncertainty, bias, and ethical implications part of the technical workflow.
-
 ## Data Loader Area
 
 The `data_loaders/` folder is reserved for reusable project data access code and dataset notes. The first planned datasets are:
