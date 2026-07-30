@@ -27,3 +27,4 @@ Repository for the Summer Semester 2026 AI and geospatial data analysis module.
 | [`data_loaders/mapillary/`](data_loaders/mapillary/) | Mapillary street-level imagery metadata around Mainz |
 | [`data_loaders/osm_unfall_atlas/`](data_loaders/osm_unfall_atlas/) | Planned OSM and Unfallatlas loader |
 | [`data_loaders/meinrad/`](data_loaders/meinrad/) | meinRad Mainz bike-sharing snapshots |
+| [`data_loaders/frankfurt_bike_sharing/`](data_loaders/frankfurt_bike_sharing/) | Frankfurt bike-sharing station graph for GCN examples |
