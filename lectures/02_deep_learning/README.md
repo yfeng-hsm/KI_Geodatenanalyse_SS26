@@ -12,6 +12,8 @@ Notebooks for neural networks, CNNs, and GNNs.
   [Exercise 2.3](notebooks/exercise_2_3_gnn_visual_message_passing_colab.ipynb): GNN message passing and training comparison.
 - [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/02_deep_learning/notebooks/exercise_2_4_warsaw_gcn_graphsage_spatial_baselines.ipynb)
   [Exercise 2.4](notebooks/exercise_2_4_warsaw_gcn_graphsage_spatial_baselines.ipynb): Warsaw bike-sharing GCN and GraphSAGE compared with Random Forest and XGBoost.
+- [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/02_deep_learning/notebooks/exercise_2_5_warsaw_stgnn_gru_temporal_graph.ipynb)
+  [Exercise 2.5](notebooks/exercise_2_5_warsaw_stgnn_gru_temporal_graph.ipynb): Warsaw bike-sharing STGNN with GRU, lagged targets, and non-overlapping temporal splits.
 
 ## German Version
 
