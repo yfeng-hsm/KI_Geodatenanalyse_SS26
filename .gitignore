@@ -3,3 +3,4 @@
 __pycache__/
 *.py[cod]
 **/afternoon_peak_01_06_2023.pt
+**/warsaw_gnn_dataset.zip
