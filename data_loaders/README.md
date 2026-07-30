@@ -1,33 +1,21 @@
 # Data Loaders
 
-This folder contains reusable dataset access notebooks and documentation for the course. The loaders are intentionally kept separate from lecture notebooks so that students can first understand where data comes from, how it is licensed, how it is converted into spatial formats, and how it can be reused in later analysis or modelling tasks.
+Reusable data access notebooks and dataset notes.
 
-Each dataset folder follows the same basic idea:
+| Folder | Data | Notebook | What it does | Colab |
+| --- | --- | --- | --- | --- |
+| [`zensus/`](zensus/) | Zensus 2022 100 m grid-cell data | [zensus_mainz_cells_map.ipynb](zensus/notebooks/zensus_mainz_cells_map.ipynb) | Downloads official grid-cell tables, extracts Mainz cells, joins indicators, and maps the result. | [Open in Colab](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/data_loaders/zensus/notebooks/zensus_mainz_cells_map.ipynb) |
+| [`airbnb/`](airbnb/) | Inside Airbnb Munich listings and neighbourhood boundaries | [airbnb_munich_points.ipynb](airbnb/notebooks/airbnb_munich_points.ipynb) | Loads listing points, joins neighbourhood polygons, maps listings, and writes prepared GeoJSON. | [Open in Colab](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/data_loaders/airbnb/notebooks/airbnb_munich_points.ipynb) |
+| [`mapillary/`](mapillary/) | Mapillary street-level imagery metadata | [mapillary_api_loader_mainz.ipynb](mapillary/notebooks/mapillary_api_loader_mainz.ipynb) | Queries small metadata samples around Mainz areas and maps images, buffers, and trajectories. | [Open in Colab](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/data_loaders/mapillary/notebooks/mapillary_api_loader_mainz.ipynb) |
+| [`osm_unfall_atlas/`](osm_unfall_atlas/) | OpenStreetMap and German Unfallatlas accident data | Planned | Reserved for OSM road-network and accident-point loading. | Planned |
+| [`meinrad/`](meinrad/) | meinRad Mainz bike-sharing snapshots | [meinrad_mainz_live_dynamic_map.ipynb](meinrad/notebooks/meinrad_mainz_live_dynamic_map.ipynb) | Loads committed snapshot CSVs, maps latest station availability, and creates a time-slider map. | [Open in Colab](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/data_loaders/meinrad/notebooks/meinrad_mainz_live_dynamic_map.ipynb) |
 
-- a short README with purpose, data source, and teaching use cases,
-- a Colab-ready notebook when a runnable loader already exists,
-- optional `src/`, `config/`, and `tests/` folders for reusable code and configuration,
-- no committed raw data unless licensing and file size make that appropriate.
+| Common folder | Contents |
+| --- | --- |
+| `README.md` | Dataset source, notebook table, and notes |
+| `notebooks/` | Colab-ready notebooks |
+| `src/` | Reusable Python loader code when available |
+| `config/` | Example configuration files when needed |
+| `tests/` | Tests for reusable loader code when available |
 
-## Current Loaders
-
-| Folder | Dataset | Notebook | Teaching use |
-| --- | --- | --- | --- |
-| `zensus/` | Zensus 2022 grid-cell data | [Open in Colab](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/data_loaders/zensus/notebooks/zensus_mainz_cells_map.ipynb) | 100 m census cells, demographic and housing variables, spatial joins |
-| `airbnb/` | Inside Airbnb data | [Open in Colab](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/data_loaders/airbnb/notebooks/airbnb_munich_points.ipynb) | Listing points, tabular features, neighbourhood aggregation |
-| `mapillary/` | Mapillary street-level imagery metadata | [Open in Colab](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/data_loaders/mapillary/notebooks/mapillary_api_loader_mainz.ipynb) | API access, image metadata, point/buffer/trajectory queries |
-| `osm_unfall_atlas/` | OSM and Unfallatlas data | Planned | Spatial analysis, graph features, accident analysis |
-| `meinrad/` | meinRad Mainz bike-sharing snapshots | [Open in Colab](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/data_loaders/meinrad/notebooks/meinrad_mainz_live_dynamic_map.ipynb) | Live API snapshots, station availability, temporal demand proxies |
-
-## Suggested Dataset Folder Structure
-
-```text
-dataset_name/
-├── README.md
-├── src/
-├── notebooks/
-├── config/
-└── tests/
-```
-
-Raw data should not be committed unless licensing and file size make this appropriate. Prefer documented download or preparation steps.
+Raw data should stay outside the repository unless the license and file size are suitable for committing.

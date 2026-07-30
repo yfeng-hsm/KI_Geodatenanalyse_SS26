@@ -1,24 +1,11 @@
 # Lectures
 
-This folder contains the lecture-by-lecture teaching material.
-
-Each lecture folder is intended to follow a consistent structure as content is added:
-
-```text
-lecture_folder/
-├── README.md
-├── notebooks/
-└── assets/
-```
-
-The current folders define the course plan. Detailed content will be developed one lecture at a time.
-
-## Current Notebooks
-
-| Lecture | Notebook | Colab |
-| --- | --- | --- |
-| 01 | [Exercise 1.1: Supervised Learning with scikit-learn and PyTorch](01_machine_learning/notebooks/exercise_1_1_supervised_learning.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/01_machine_learning/notebooks/exercise_1_1_supervised_learning.ipynb) |
-| 01 | [Exercise 1.2: Classification and Clustering on a Small Spatial Dataset](01_machine_learning/notebooks/exercise_1_2_classification_clustering.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/01_machine_learning/notebooks/exercise_1_2_classification_clustering.ipynb) |
-| 02 | [Exercise 2.1: Bike-Sharing Demand Prediction with PyTorch](02_deep_learning/notebooks/exercise_2_1_bike_sharing_mlp_pytorch.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/02_deep_learning/notebooks/exercise_2_1_bike_sharing_mlp_pytorch.ipynb) |
-| 02 | [Exercise 2.2: A Small CNN for MNIST with PyTorch](02_deep_learning/notebooks/exercise_2_2_mnist_cnn_pytorch.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/02_deep_learning/notebooks/exercise_2_2_mnist_cnn_pytorch.ipynb) |
-| 02 | [Exercise 2.3: Graph Neural Networks - Visual Demo and Training Exercise](02_deep_learning/notebooks/exercise_2_3_gnn_visual_message_passing_colab.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/02_deep_learning/notebooks/exercise_2_3_gnn_visual_message_passing_colab.ipynb) |
+| Folder | Contents | Notebook | What it does | Colab |
+| --- | --- | --- | --- | --- |
+| [`01_machine_learning/`](01_machine_learning/) | Machine learning basics | [Exercise 1.1](01_machine_learning/notebooks/exercise_1_1_supervised_learning.ipynb) | Builds a supervised learning workflow with scikit-learn and PyTorch. | [Open in Colab](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/01_machine_learning/notebooks/exercise_1_1_supervised_learning.ipynb) |
+| [`01_machine_learning/`](01_machine_learning/) | Machine learning basics | [Exercise 1.2](01_machine_learning/notebooks/exercise_1_2_classification_clustering.ipynb) | Runs classification and clustering on a small spatial dataset. | [Open in Colab](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/01_machine_learning/notebooks/exercise_1_2_classification_clustering.ipynb) |
+| [`02_deep_learning/`](02_deep_learning/) | Deep learning basics | [Exercise 2.1](02_deep_learning/notebooks/exercise_2_1_bike_sharing_mlp_pytorch.ipynb) | Trains an MLP for bike-sharing demand prediction with PyTorch. | [Open in Colab](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/02_deep_learning/notebooks/exercise_2_1_bike_sharing_mlp_pytorch.ipynb) |
+| [`02_deep_learning/`](02_deep_learning/) | Deep learning basics | [Exercise 2.2](02_deep_learning/notebooks/exercise_2_2_mnist_cnn_pytorch.ipynb) | Trains a small CNN for MNIST with PyTorch. | [Open in Colab](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/02_deep_learning/notebooks/exercise_2_2_mnist_cnn_pytorch.ipynb) |
+| [`02_deep_learning/`](02_deep_learning/) | Deep learning basics | [Exercise 2.3](02_deep_learning/notebooks/exercise_2_3_gnn_visual_message_passing_colab.ipynb) | Visualizes GNN message passing and compares graph-aware and feature-only models. | [Open in Colab](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/02_deep_learning/notebooks/exercise_2_3_gnn_visual_message_passing_colab.ipynb) |
+| [`03_llm_basics/`](03_llm_basics/) | LLM basics | [Exercise 3.1](03_llm_basics/notebooks/exercise_3_1_llm_osm_tool_widget_mainz.ipynb) | Uses an LLM to plan SQL queries over Mainz OSM points with DuckDB. | [Open in Colab](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/03_llm_basics/notebooks/exercise_3_1_llm_osm_tool_widget_mainz.ipynb) |
+| [`04_spatial_data_analysis/`](04_spatial_data_analysis/) | Spatial data analysis | [Exercise 4.1](04_spatial_data_analysis/notebooks/exercise_4_1_openrouteservice_routing_mainz.ipynb) | Uses OpenRouteService routing data around Mainz. | [Open in Colab](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/04_spatial_data_analysis/notebooks/exercise_4_1_openrouteservice_routing_mainz.ipynb) |
