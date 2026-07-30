@@ -1,68 +1,71 @@
 # meinRad Mainz Data Loader
 
-This folder collects and visualizes live availability snapshots from the Mainz `meinRad` bike-sharing system. The source is the public nextbike live endpoint for the `mz` domain.
+Live availability snapshots from the Mainz `meinRad` bike-sharing system.
 
 ## Notebook
 
-| Notebook | Data/Input | What it does | Output | Colab |
-| --- | --- | --- | --- | --- |
-| [meinrad_mainz_live_dynamic_map.ipynb](notebooks/meinrad_mainz_live_dynamic_map.ipynb) | Snapshot CSV files in `data_loaders/meinrad/data/` | Loads committed snapshot CSVs, maps the latest station availability with Folium, and creates a Leaflet time-slider map when multiple snapshots exist. If CSVs are missing locally, it downloads the GitHub repository archive once and extracts the committed CSV files. | Interactive maps and summary tables | [Open in Colab](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/data_loaders/meinrad/notebooks/meinrad_mainz_live_dynamic_map.ipynb) |
+- [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/data_loaders/meinrad/notebooks/meinrad_mainz_live_dynamic_map.ipynb)
+  [meinrad_mainz_live_dynamic_map.ipynb](notebooks/meinrad_mainz_live_dynamic_map.ipynb): loads committed snapshot CSVs, maps latest station availability, and creates a time-slider map.
 
-The notebook is read-only: it does not call the live meinRad API and does not create new snapshots.
+The notebook is read-only. It does not call the live API. If CSVs are missing locally, it downloads the GitHub repository archive once and extracts the committed CSV files.
 
-## Data Source
+## Data
 
-| Item | Value |
-| --- | --- |
-| Live endpoint | `https://api.nextbike.net/maps/nextbike-live.json?domains=mz` |
-| System | `meinRad` |
-| City | Mainz |
-| City UID | `755` |
-| Tested | `2026-07-12`: HTTP 200 for `domains=mz`, 222 places, more than 1,100 available bikes |
+- Endpoint: `https://api.nextbike.net/maps/nextbike-live.json?domains=mz`
+- System: `meinRad`
+- City: Mainz
+- City UID: `755`
+- Use `?domains=mz`; querying `?city=755` alone currently returns an empty response.
 
-Querying `?city=755` alone currently returns an empty response. Use `?domains=mz` and then select city UID `755` from the returned payload.
+## Current Repository Data
+
+- CSV snapshots: `1240`
+- Summary JSON files: `1240`
+- Raw compressed JSON files: `1240`
+- Total station/place rows across CSV snapshots: `252721`
+- First CSV checked locally: `meinrad_mainz_places_berlin_20260712T130051.csv`
+- Latest CSV checked locally: `meinrad_mainz_places_berlin_20260725T121525.csv`
+- Latest CSV rows: `213`
+- Latest station rows: `192`
+- Latest floating-bike rows: `21`
+- Latest available bikes from CSV sum: `1158`
+
+The row counts can look smaller than expected:
+
+- The CSV is station/place-level, not bike-level.
+- One CSV row is one station or floating-bike place.
+- Bike counts are in `bikes_available_to_rent` and `bike_count_from_list`.
+- Raw `.json.gz` files keep the complete API response, including bike-level lists.
+- The workflow ran every 15 minutes. From `2026-07-12 13:00` to `2026-07-25 12:15`, that is about `1245` slots; `1240` committed CSV snapshots is close to that.
+- A full two-week run every 10 minutes would be about `2016` snapshots.
 
 ## Snapshot Script
 
-| Command | Output |
-| --- | --- |
-| `python3 -m data_loaders.meinrad.src.meinrad_snapshot` | Writes one station/place CSV and one summary JSON to `data_loaders/meinrad/data/`. |
-| `python3 -m data_loaders.meinrad.src.meinrad_snapshot --save-raw` | Also writes the complete raw API JSON response, including bike-level records. |
-| `python3 -m data_loaders.meinrad.src.meinrad_snapshot --save-raw --compress-raw` | Writes the raw API response as compressed `.json.gz`. |
+- `python3 -m data_loaders.meinrad.src.meinrad_snapshot`
+  writes one station/place CSV and one summary JSON to `data_loaders/meinrad/data/`.
+- `python3 -m data_loaders.meinrad.src.meinrad_snapshot --save-raw`
+  also writes the complete raw API JSON response.
+- `python3 -m data_loaders.meinrad.src.meinrad_snapshot --save-raw --compress-raw`
+  writes the raw API response as compressed `.json.gz`.
 
 ## Output Files
 
-| File pattern | Contents | Git |
-| --- | --- | --- |
-| `meinrad_mainz_places_<timestamp>.csv` | One row per station/place, with coordinates, available bikes, racks, maintenance state, bike-type counts, and no individual bike IDs. | Ignored locally unless intentionally committed by collection workflow |
-| `meinrad_mainz_summary_<timestamp>.json` | Snapshot metadata and city-level counts. | Ignored locally unless intentionally committed by collection workflow |
-| `meinrad_mainz_raw_<timestamp>.json.gz` | Complete compressed API response, including bike-level records. | Large over time; use only when needed |
+- `meinrad_mainz_places_<timestamp>.csv`: station/place rows with coordinates, available bikes, racks, maintenance state, and bike-type counts.
+- `meinrad_mainz_summary_<timestamp>.json`: snapshot metadata and city-level counts.
+- `meinrad_mainz_raw_<timestamp>.json.gz`: complete compressed API response.
 
 ## GitHub Actions Collection
 
-| Item | Value |
-| --- | --- |
-| Workflow | `.github/workflows/collect-meinrad-2-weeks.yml` |
-| Start | `2026-07-12 13:00 Europe/Berlin` |
-| End | `2026-07-26 12:00 Europe/Berlin` |
-| Trigger | external cron-job.org `workflow_dispatch` |
-| Interval | every 15 minutes at `:00`, `:15`, `:30`, and `:45` in `Europe/Berlin` |
-| Output folder | `data_loaders/meinrad/data/` |
-| Timestamp fields | `collected_at_utc`, `collected_at_germany` |
-| Files per run | station CSV, summary JSON, compressed raw API response |
+- Workflow: `.github/workflows/collect-meinrad-2-weeks.yml`
+- Run window: `2026-07-12 13:00` to `2026-07-26 12:00 Europe/Berlin`
+- Trigger: external cron-job.org `workflow_dispatch`
+- Interval: every 15 minutes
+- Output folder: `data_loaders/meinrad/data/`
 
-External cron calls the GitHub workflow dispatch endpoint:
+External cron calls:
 
 ```text
 POST https://api.github.com/repos/yfeng-hsm/KI_Geodatenanalyse_SS26/actions/workflows/collect-meinrad-2-weeks.yml/dispatches
-```
-
-Required headers:
-
-```text
-Authorization: Bearer <YOUR_GITHUB_TOKEN>
-Accept: application/vnd.github+json
-Content-Type: application/json
 ```
 
 Request body:
@@ -71,21 +74,8 @@ Request body:
 {"ref":"main","inputs":{"force_collect":"false"}}
 ```
 
-One sampled run on `2026-07-12` produced approximately:
-
-| File | Size |
-| --- | --- |
-| station CSV | 45 KB |
-| summary JSON | 1 KB |
-| raw API JSON uncompressed | 748 KB |
-| raw API JSON compressed | 28-36 KB |
-
-At a 15-minute interval for 14 days, this is 1,344 snapshots. Expected repository working-tree size is roughly 100-110 MB when storing compressed raw JSON, or about 1.0 GB if raw JSON is kept uncompressed.
-
 ## Limitations
 
-| Item | Limitation |
-| --- | --- |
-| Availability snapshots | The endpoint provides current availability, not official trip records. |
-| Origin-destination flows | Rentals cannot be reconstructed reliably from snapshots alone. |
-| Bike-level records | Raw responses can include bike identifiers; the station CSV omits them. |
+- The endpoint provides availability snapshots, not official trip records.
+- Origin-destination flows cannot be reconstructed reliably from these snapshots alone.
+- Raw responses can include bike identifiers; the station/place CSV omits individual bike IDs.
