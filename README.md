@@ -12,9 +12,6 @@ This repository is organized as a teaching workspace: each lecture has its own f
 | `lectures/02_deep_learning/` | Deep learning | Neurons, optimization, CNNs, Transformers, GNNs |
 | `lectures/03_llm_basics/` | LLM basics | Tokenization, embeddings, prompting, retrieval, geospatial use cases |
 | `lectures/04_spatial_data_analysis/` | Spatial data analysis | Review of common spatial analysis concepts and tools |
-| `lectures/05_ethics_bias/` | Ethics and bias | Fairness, bias, accountability, responsible use of geospatial AI |
-
-Note: the course is planned as five lectures. The ethics and bias topic is placed as lecture 5, even though it may have been referred to as lecture 6 in early notes.
 
 ## Repository Layout
 
@@ -24,8 +21,10 @@ Note: the course is planned as five lectures. The ethics and bias topic is place
 │   ├── 01_machine_learning/
 │   ├── 02_deep_learning/
 │   ├── 03_llm_basics/
-│   ├── 04_spatial_data_analysis/
-│   └── 05_ethics_bias/
+│   └── 04_spatial_data_analysis/
+├── llm_api/
+│   ├── notebooks/
+│   └── assets/
 └── data_loaders/
     ├── zensus/
     ├── airbnb/
@@ -43,8 +42,8 @@ Note: the course is planned as five lectures. The ethics and bias topic is place
 | 02 Deep Learning | [Exercise 2.1: Bike-Sharing Demand Prediction with PyTorch](lectures/02_deep_learning/notebooks/exercise_2_1_bike_sharing_mlp_pytorch.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/02_deep_learning/notebooks/exercise_2_1_bike_sharing_mlp_pytorch.ipynb) |
 | 02 Deep Learning | [Exercise 2.2: A Small CNN for MNIST with PyTorch](lectures/02_deep_learning/notebooks/exercise_2_2_mnist_cnn_pytorch.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/02_deep_learning/notebooks/exercise_2_2_mnist_cnn_pytorch.ipynb) |
 | 02 Deep Learning | [Exercise 2.3: Graph Neural Networks - Visual Demo and Training Exercise](lectures/02_deep_learning/notebooks/exercise_2_3_gnn_visual_message_passing_colab.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/02_deep_learning/notebooks/exercise_2_3_gnn_visual_message_passing_colab.ipynb) |
-| 03 LLM Basics | [Testing the Uni Mainz KI-Chat API](lectures/03_llm_basics/notebooks/uni_mainz_ki_chat_api_test.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/03_llm_basics/notebooks/uni_mainz_ki_chat_api_test.ipynb) |
-| 03 LLM Basics | [Testing the AcademicCloud/GWDG SAIA Chat AI API](lectures/03_llm_basics/notebooks/academiccloud_saia_api_test.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/03_llm_basics/notebooks/academiccloud_saia_api_test.ipynb) |
+| LLM API | [Testing the Uni Mainz KI-Chat API](llm_api/notebooks/uni_mainz_ki_chat_api_test.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/llm_api/notebooks/uni_mainz_ki_chat_api_test.ipynb) |
+| LLM API | [Testing the AcademicCloud/GWDG SAIA Chat AI API](llm_api/notebooks/academiccloud_saia_api_test.ipynb) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/llm_api/notebooks/academiccloud_saia_api_test.ipynb) |
 
 ## Data Loader Area
 

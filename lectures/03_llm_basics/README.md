@@ -6,19 +6,6 @@ This lecture introduces large language models and connects them to geospatial an
 
 ## Notebooks
 
-### Uni Mainz KI-Chat@JGU
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/03_llm_basics/notebooks/uni_mainz_ki_chat_api_test.ipynb)
-
-- [Testing the Uni Mainz KI-Chat API](notebooks/uni_mainz_ki_chat_api_test.ipynb)
-
-### AcademicCloud/GWDG SAIA
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/03_llm_basics/notebooks/academiccloud_saia_api_test.ipynb)
-
-- [Testing the AcademicCloud/GWDG SAIA Chat AI API](notebooks/academiccloud_saia_api_test.ipynb)
-
-
 ### Exercise 3.1: Mainz OSM SQL Planner with an LLM and DuckDB
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/03_llm_basics/notebooks/exercise_3_1_llm_osm_tool_widget_mainz.ipynb)
