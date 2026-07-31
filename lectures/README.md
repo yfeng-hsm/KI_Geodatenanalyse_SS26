@@ -25,7 +25,9 @@ Lecture notebooks are grouped by topic.
 - [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/03_llm_basics/notebooks/exercise_3_1_llm_osm_tool_widget_mainz.ipynb)
   [Exercise 3.1](03_llm_basics/notebooks/exercise_3_1_llm_osm_tool_widget_mainz.ipynb): LLM-planned SQL queries over Mainz OSM points with DuckDB.
 
-## 04 Spatial Data Analysis
+## 04 Geospatial Feature Acquisition
 
 - [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/04_spatial_data_analysis/notebooks/exercise_4_1_openrouteservice_routing_mainz.ipynb)
-  [Exercise 4.1](04_spatial_data_analysis/notebooks/exercise_4_1_openrouteservice_routing_mainz.ipynb): OpenRouteService routing in Mainz.
+  [Exercise 4.1](04_spatial_data_analysis/notebooks/exercise_4_1_openrouteservice_routing_mainz.ipynb): routing features from OpenRouteService in Mainz.
+- [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/lectures/04_spatial_data_analysis/notebooks/exercise_4_2_openmeteo_bikesharing_frankfurt.ipynb)
+  [Exercise 4.2](04_spatial_data_analysis/notebooks/exercise_4_2_openmeteo_bikesharing_frankfurt.ipynb): weather features from Open-Meteo for Frankfurt bike-sharing station time series.

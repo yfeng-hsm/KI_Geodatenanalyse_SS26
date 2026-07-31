@@ -12,7 +12,7 @@ Reusable data access notebooks and dataset notes.
   [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/data_loaders/mapillary/notebooks/mapillary_api_loader_mainz.ipynb)
 - [meinrad/](meinrad/): meinRad Mainz bike-sharing snapshots.
   [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/data_loaders/meinrad/notebooks/meinrad_mainz_live_dynamic_map.ipynb)
-- [frankfurt_bike_sharing/](frankfurt_bike_sharing/): Frankfurt bike-sharing station graph for GCN examples.
+- [frankfurt_bike_sharing/](frankfurt_bike_sharing/): Frankfurt bike-sharing filtered full dataset viewer, time series, station maps, and graph builder.
   [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yfeng-hsm/KI_Geodatenanalyse_SS26/blob/main/data_loaders/frankfurt_bike_sharing/notebooks/frankfurt_bike_sharing_gcn_loader.ipynb)
 - [osm_unfall_atlas/](osm_unfall_atlas/): planned OSM and Unfallatlas loader.
 
