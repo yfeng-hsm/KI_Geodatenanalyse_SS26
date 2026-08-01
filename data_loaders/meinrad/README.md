@@ -57,7 +57,7 @@ The row counts can look smaller than expected:
 ## GitHub Actions Collection
 
 - Workflow: `.github/workflows/collect-meinrad-2-weeks.yml`
-- Run window: `2026-07-12 13:00` to `2026-07-26 12:00 Europe/Berlin`
+- Run window: `2026-08-01 12:25` to `2026-08-08 12:25 Europe/Berlin`
 - Trigger: external cron-job.org `workflow_dispatch`
 - Interval: every 15 minutes
 - Output folder: `data_loaders/meinrad/data/`
