@@ -1,0 +1,226 @@
+station_id,name,lat,lon,bike_racks
+46,Südbahnhof / Hedderichstr.,50.099792,8.68488,0
+896,Hauptwache,50.113124,8.678609,0
+1572,Fressgasse / Neue Mainzer Str.,50.114837,8.672574,0
+1640,Friedberger Platz / Café Harveys,50.123068,8.69268,0
+2304,Römer / Touristeninformation,50.110792,8.681833,0
+2612,Opernplatz / Bockenheimer Landstr.,50.115329,8.671153,0
+3364,Höhenstraße / Berger Str.,50.122879,8.701279,0
+7374,Merianplatz / Berger Str.,50.120324,8.695657,0
+7378,Bockenheimer Warte / Café Extrablatt,50.120031,8.650269,0
+7634,Schaumainkai / Schweizer Str.,50.105345,8.678008,0
+7644,Leipziger Str. / Markgrafenstr.,50.122683,8.645521,0
+7647,Schweizer Platz / Diesterwegstr.,50.101915,8.681114,0
+7648,Zoo / Alfred-Brehm-Platz,50.115535,8.698785,0
+10725,Bockenheimer Warte/Carlo-Schmid-Platz,50.12032,8.651497,0
+29169,Willy-Brandt-Platz / Neue Mainzer Str. ,50.10903,8.674521,0
+42801,Messe / Festhalle / Eingang U-Bahn,50.111948,8.654126,0
+52745,Konstabler Wache / Conrad-Elektronik,50.115009,8.687546,0
+67722,Großer Hasenpfad/Appartments Johann Wolfgang,50.091182,8.686082,0
+121962,Hauptbahnhof / Vorplatz,50.107625,8.664126,0
+121963,Nibelungenplatz / Friedberger Landstr.,50.128915,8.692439,0
+122146,Roßmarkt / Junghofstr. (Goetheplatz),50.112969,8.676619,0
+122155,Baseler Platz / Baseler Straße / Gutleutstr.,50.1041,8.664828,0
+122156,Eschenheimer Turm / U-Bahn,50.116512,8.679725,0
+125751,Hotel B&B Frankfurt City-Ost / Hanauer Landstr.,50.111452,8.709562,0
+212843,Hotel Ramada City / Weserstr. / Kaiserstr.,50.10858,8.669511,0
+278856,Trianon,50.112611,8.667151,13
+352024,EZB/ Paul-Arnsberg-Platz,50.110699,8.701172,0
+353585,Bockenheimer Landstr. / Liebigstr.,50.117163,8.665735,0
+706050,USCC Haltestelle Platenstraße,50.136095,8.664136,0
+1991242,Hotel Adina Apartment Frankfurt / Osloer Straße,50.108824,8.65492,0
+2913514,Uniklinikum,50.096199,8.66089,0
+4918885,Frankfurt University (Gebäude 1),50.129929,8.692959,0
+4918944,Frankfurt Main West,50.119147,8.640082,0
+4918963,Adalbertstraße,50.119412,8.643601,0
+4919013,Ginnheimer Landstraße,50.131246,8.645972,0
+4919187,Rebstöcker Straße,50.101664,8.628387,0
+4919215,Schwalbacher Straße,50.102132,8.636048,0
+4919237,Sandhofstraße,50.091681,8.653257,0
+4919327,Schaumainkai/Friedensbrücke,50.100153,8.668331,0
+4919353,Schaumainkai/Schulstraße,50.107055,8.683346,0
+4919399,DJH Jugendherberge,50.10711,8.689225,0
+4919422,Lokalbahnhof,50.101918,8.691108,0
+4919454,Gerbermühle,50.106082,8.720849,0
+4919603,Ostbahnhof,50.112608,8.707169,0
+4919635,Grüneburgweg/Eschersheimer Landstraße,50.120891,8.675471,0
+4919756,Palmengarten,50.123495,8.658509,0
+4919800,Eschersheimer Landstraße,50.13136,8.671582,0
+4919850,Deutsche Nationalbibliothek,50.132006,8.683029,0
+4919882,AStA Frankfurt University of Applied Sciences,50.13039,8.69218,10
+4919891,Frankfurt University1,50.129513,8.692637,0
+4919909,Comeniusstraße/Günthersburgpark,50.131343,8.70542,0
+4919956,Panoramabad,50.1317,8.7171,0
+4919975,Eissporthalle/Kettelerallee,50.123591,8.717281,0
+4919997,Bornheim Mitte,50.126528,8.708392,0
+4920028,Freibad Eschersheim,50.16374,8.65376,0
+4928537,Marriott Hotel / Hamburger Allee ,50.114352,8.649958,0
+5327078,Kleiststraße / Gleimstraße,50.131439,8.692573,0
+5661841,Bremer Platz,50.124155,8.669688,0
+5661876,Taunusanlage,50.114166,8.669672,0
+5661895,Mainkai / Eiserner Steg,50.109034,8.68156,0
+5661906,Ostendstraße,50.113592,8.696339,0
+5661913,Friedberger Anlage / Uhrtürmchen,50.11601,8.695518,0
+5661918,Galluswarte/ S-Bahn,50.103496,8.644678,0
+5661926,Messe Frankfurt/ S-Bahn,50.112453,8.643767,0
+5661941,Voltastraße / Franklinstraße,50.11698,8.629106,0
+8621705,Eschersheimer Landstraße/Marbachweg,50.138969,8.670675,0
+8741728,Eurotheum,50.113155,8.671565,0
+9340596,Rödelheimer Straße ,50.124984,8.637287,0
+9342153,Hülya-Platz,50.12367,8.63977,0
+9342526,Gisèle-Freund-Platz,50.127054,8.671061,0
+9343020,Schloßstraße/ Robert-Mayer-Straße,50.11754,8.64543,0
+9842412,Frauenfriedenskirche,50.128526,8.646374,0
+9842463,Marbachweg/ Sozialzentrum,50.141761,8.684006,0
+9842640,Max-Horkheimer-Straße,50.128557,8.668476,0
+9842945,Finkenhofstraße/Oeder Weg,50.122174,8.680621,0
+9843014,Beethovenplatz,50.118108,8.656358,0
+9843028,Studierendenhaus an der Goethe-Universität,50.118583,8.651889,0
+9843305,Flößerbrücke/ Oskar-von-Miller-Straße,50.108762,8.694681,0
+9843325,Friedberger Landstraße,50.118867,8.688894,0
+9843357,Affentorplatz,50.10441,8.690094,0
+9843369,Gartenstraße,50.097376,8.664962,0
+9843503,Frankfurt - Niederrad,50.080814,8.636509,0
+9843566,Musterschule,50.122112,8.686066,0
+9843633,Holzhausenschlösschen,50.125765,8.679596,0
+9843677,Walther-von-Cronberg Platz,50.106254,8.695469,0
+9843695,Schaumainkai/ Dürerstraße,50.103749,8.674253,0
+11036794,Westhafenplatz,50.101647,8.663514,0
+14997045,AVIS - FRANKFURT CENTER,50.10214,8.61843,0
+15857245,Heddernheimer Landstraße,50.163838,8.634911,0
+21496771,Mainova Zentrale,50.118652,8.632856,0
+21496874,Mainova Parkplatz,50.098646,8.649799,0
+28208283,Kaiserplatz,50.110709,8.675223,0
+30651507,Markus-Krankenhaus,50.136786,8.646073,0
+30651625,Europaviertel/ Pariser Straße,50.108351,8.629146,0
+30651687,Bornheim/ Hoher Brunnen,50.128661,8.711319,0
+34887635,Deutsche Bank Park / Stadion Osttribüne,50.068458,8.651186,0
+35355042,Westbahnhof/ Solmsstraße,50.11879,8.638789,0
+44415492,Frankensteiner Platz,50.106718,8.692787,0
+44415657,Hedderichstr./Oppenheimer Landstr.,50.09761,8.6799,0
+44415824,Dürerstr./ Hans-Thoma-Str.,50.10225,8.67617,0
+44415933,Stresemannallee,50.09429,8.67141,0
+44416016,Mörfelder Landstr./ Stresemannallee,50.08939,8.6712,0
+44416108,Triftstraße,50.08702,8.65067,0
+44416171,Rennbahn,50.08334,8.65156,0
+44416336,Mühlberg,50.10195,8.70007,0
+44418157,Zum Schlegelhof,50.10443,8.70341,0
+44418631,Buchrainplatz,50.10024,8.72443,0
+44418770,Hafenpark,50.10839,8.70618,0
+44419170,Hanauer Landstraße,50.11593,8.72487,0
+44419261,Saalburgallee/Wittelsbacherallee,50.12465,8.71399,0
+44419709,Friedberger Landstraße/Dortelweiler Str.,50.13903,8.69861,0
+44419761,Ludwig-Landmann-Str./Am Industriehof,50.12951,8.62247,0
+44419957,Am Industriehof,50.12857,8.62948,0
+44420048,Rödelheim,50.12398,8.6076,0
+44420116,Niddaufer/Praunheimer Landstraße,50.14791,8.62408,0
+44420246,Westendplatz,50.113,8.66196,0
+44420379,Europaviertel West,50.10783,8.6242,0
+44446002,Frankenallee/Schwalbacher Str.,50.10421,8.63548,0
+44446093,Europa-Allee/Lissaboner Str.,50.108266,8.643767,0
+44446198,Rebstockbad,50.1129,8.61866,0
+44446292,Rhönstraße/Luxemburgerallee,50.11947,8.71194,0
+44446453,Habsburger-/Wittelsbacherallee,50.12003,8.70526,0
+44446590,Eckenheimer Landstraße,50.136596,8.684196,0
+44446639,Am Weißen Stein,50.15694,8.65621,0
+44446728,Hügelstraße,50.14792,8.66703,0
+44446792,Pfarrer-Perabo-Platz,50.09885,8.63388,0
+44446893,Europa-Allee/Den Haager Str.,50.109028,8.651361,0
+44446984,Odina-Bott-Platz,50.11817,8.66327,0
+44536851,Lindner Congress Hotel,50.101748,8.553479,0
+45946888,Heerstraße,50.144898,8.607554,0
+45947172,Gießener Straße/ Ronneburgstraße,50.150811,8.688662,0
+45947513,Gießener Straße/ Marbachweg,50.14372,8.69261,0
+45947695,Seckbacher Landstraße/ Nußbaumstraße,50.13512,8.71222,0
+45947832,Balduinstraße,50.09936,8.71482,0
+45948027,Hainer Weg/ Geleitsstraße,50.09888,8.69304,0
+45948224,Goldsteinstraße,50.08451,8.62979,0
+46007839,Zeil/ Breite Gasse,50.114842,8.692379,0
+47689130,Bleichstraße/ Alte Gasse,50.118091,8.685679,0
+48860682,Ginnheimer Landstraße Bus,50.130854,8.645409,0
+60493281,Stiftstraße/ Zeil,50.114746,8.683159,0
+67476856,Le Meridien,50.105729,8.666348,0
+73564537,Neue Börsenstraße,50.125966,8.629459,0
+73565266,Commerzbank Digital Campus,50.116049,8.632647,0
+73565473,Adam-Riese-Platz,50.106464,8.655692,0
+80825229,Hauptwache Nord,50.114077,8.679167,0
+89817205,Bad Vilbel,50.188254,8.740295,0
+89817859,Frankfurter Berg,50.170672,8.676795,0
+89818205,Bad Vilbel Süd,50.17828,8.733945,0
+89818582,Ginnheim U-Bahn Niddapark,50.145374,8.6438,0
+89819087,Riedhalsstraße,50.1826,8.697403,0
+105203973,Leonardo Royal Hotel,50.091734,8.691039,0
+107149989,Kaiserleistraße,50.107148,8.732929,0
+107154149,Schweizer Straße/Gartenstraße,50.103077,8.679658,0
+107155056,Tugendbrunnen,50.113274,8.68404,0
+108125249,Westendplatz,50.113,8.66196,0
+108300725,Oberforsthaus,50.078394,8.653858,0
+108305380,Martha-Wertheimer-Platz,50.101662,8.686432,0
+108627060,Oppenheimer Landstraße,50.095255,8.681896,0
+109164332,Höchst Bahnhof Süd,50.101951,8.542422,0
+109164755,Bolongarostraße,50.10025,8.550018,0
+109165182,Tillystraße,50.101825,8.560215,0
+109165551,S-Bahnhof Frankfurt Nied,50.102925,8.570445,0
+109168992,Höchst Markt,50.099582,8.545421,0
+109169466,Nied Kirche,50.098512,8.567186,0
+109169975,Alt-Rödelheim,50.125339,8.611482,0
+109170512,Klinikum Höchst,50.107295,8.544387,0
+109170896,Höchst Bahnhof Nord,50.103467,8.542084,0
+109175011,Griesheim S-Bahnhof,50.094034,8.606281,0
+109184498,Zuckschwerdtstraße,50.10285,8.551773,0
+110441802,Berger Straße/ Spessartstraße,50.125578,8.70722,0
+110740713,Fernbusterminal,50.104648,8.661589,0
+122426924,Mitscherlichplatz,50.123495,8.665041,0
+122427142,Friedrichstraße,50.121288,8.663727,0
+122427739,Glauburgstraße (U-Bahn),50.128404,8.684302,0
+122428101,Eckenheimer Landstr./ Oeder Weg,50.129273,8.68392,0
+122428416,Sömmerringstraße,50.12376,8.681221,0
+122428684,Hansaallee,50.123236,8.675388,0
+122428983,Westend Carree,50.121107,8.672347,0
+122429336,Reuterweg/ Grüneburgweg,50.121751,8.670169,0
+122429582,Reuterweg/ Gärtnerweg,50.11879,8.671081,0
+122430148,Eschenheimer Tor Nord,50.118,8.679296,0
+122430526,Friedberger Landstraße/ Scheffelstraße,50.122207,8.690785,0
+122430976,Unterweg,50.119098,8.683935,0
+122432016,Börsenstraße,50.115728,8.67707,0
+122433189,Fressgass,50.114224,8.676373,0
+122433688,Taunustor,50.110994,8.672354,0
+122434231,Platz der Republik,50.109556,8.660552,0
+122661300,Niddastraße/ Ludwigstraße,50.107417,8.658712,0
+122661640,Holbeinsteg/ Windmühlstraße,50.10492,8.670623,0
+122661787,Untermainkai,50.107721,8.675842,0
+122661969,Untermainanlage,50.1074,8.673028,0
+122662081,Karmeliterkloster,50.109982,8.67754,0
+122662716,Fischerplätzchen,50.110062,8.687561,0
+122662804,Rechneigrabenstraße,50.1111,8.692402,0
+122662922,Ostbahnhof/ Sonnemannstr.,50.111751,8.705386,0
+122663081,Rückertstraße,50.112917,8.699361,0
+122663186,Habsburgerallee,50.117538,8.708538,0
+123243434,Frankenallee/ Speyererstraße,50.106651,8.649188,0
+125919570,Palmengartenstraße,50.119915,8.656615,0
+126998836,Waldschulstraße,50.1001,8.603677,0
+126999604,Berger Straße/ Hermesweg,50.118415,8.691974,0
+127000195,Vilbeler Straße,50.11694,8.686029,0
+127638121,Domplatz,50.110956,8.684713,0
+150425967,Taunsstraße,50.108294,8.663834,0
+150427380,Kaiserstraße / Hauptbahnof,50.107494,8.665184,0
+150429166,Mannheimer str. / Hauptbahnof,50.105939,8.664938,0
+152246578,Bad Vilbel,50.188198,8.740861,0
+152247196,Berkersheim,50.177654,8.698346,0
+152247411,Frankfurter Berg,50.170631,8.676443,0
+152248385,Bad Vilbel Süd,50.178283,8.734033,0
+152248587,Ginnheim,50.145374,8.6438,0
+152248672,Groß Karben,50.23223,8.75435,0
+152248726,Offenbach Ost,50.102418,8.783892,0
+152248902,Offenbach Marktplatz,50.106492,8.761658,0
+152248978,Offenbach Kaiserlei,50.105167,8.736383,0
+153308740,Uhlandstraße/ Ostend str.,50.113289,8.696244,0
+171721984,IU Internationale Hochschule,50.099988,8.684855,0
+196761545,Ostbahnof II,50.11175,8.708306,0
+205455376,Nationaler Radverkehrskongress,50.110807,8.654365,0
+210219012,Offenbach Hafen 2 / Nordring,50.112528,8.741389,0
+210219671,Offenbach Wetter- und Klima-Werkstatt,50.104937,8.758895,0
+210224265,Offenbach Capitol Theater,50.109167,8.756028,0
+210226247,Künstler*innenhaus Mousonturm,50.119028,8.699667,0
+213262708,HORIZONT Kongress,50.121407,8.656444,0
+213865203,Offenbach Alte Schlossrei,50.108722,8.743306,0
